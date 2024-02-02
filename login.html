@@ -1,0 +1,112 @@
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <section id="header1">
+            <div class="container">
+            <div class="address-container">
+                <ul>
+                <li><i class="fa-solid fa-phone"></i> 01-568479</li>
+                <li><i class="fa-solid fa-envelope"></i> bloodbank@gmail.com</li>
+                </ul>
+            </div>
+            <div class="social-container">
+                <ul>
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-viber"></i></a></li>
+                </ul>
+            </div>
+            <div class="login-container">
+                <ul>
+                <li class="login"><a href="">Log In</a></li>
+                <li class="signin"><a href="">Sign In</a></li>
+                </ul>
+            </div>
+            </div>
+        </section>
+
+        <section id="header2">
+            <div class="container2">
+                <nav>
+                    <div class="logo">
+                        <img src="image/logo.jpeg">
+                </div>
+                </nav>
+               
+                <div class="navbar1">
+                    <ul>
+                        <li><a href="home.html">home</a></li>
+                        <li><a href="">services</a></li>
+                        <li><a href="">about us</a></li>
+                        <li><a href="">donate</a></li>
+                        <li><a href="">blood details</a></li>
+                        <li><a href="">why donate blood?</a></li>
+                        <li><a href="">reserve blood</a></li>
+                        <li><a href="">Contact us</a></li>
+                        <li class="bar-icon"><i class="fa-solid fa-bars"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <div class="box">
+        <h1 id="title">Sign Up</h1>
+        <form>
+            <div class="group">
+                <div class="field" id="namefield">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Name">
+                </div>
+
+                <div class="field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="text" placeholder="E-mail">
+                </div>
+
+                <div class="field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="text" placeholder="Password">
+                </div>
+                <p>Lost password <a href=""> Click here</a> </p>
+            </div>
+            <div class="btn">
+                <button type="button" id="signupbtn">Sign up</button>
+                <button type="button" class="b" id="signinbtn">Sign in</button>
+            </div>
+        </form>
+
+    </div>
+
+    <script>
+        let signupbtn = document.getElementById("signupbtn");
+        let signinbtn = document.getElementById("signinbtn");
+        let namefield = document.getElementById("namefield");
+        let title = document.getElementById("title");
+
+        signinbtn.onclick = function(){
+            namefield.style.maxHeight = "0"
+            title.innerHTML = "Sign In";
+            signupbtn.classList.add("b");
+            signinbtn.classList.remove("b");
+
+        }
+        
+        signupbtn.onclick = function(){
+            namefield.style.maxHeight = "60px"
+            title.innerHTML = "Sign Up";
+            signupbtn.classList.remove("b");
+            signinbtn.classList.add("b");
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
